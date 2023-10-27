@@ -45,7 +45,6 @@ public class ImagenFondoPanel extends javax.swing.JPanel {
         });
 
         jTextFieldRuta.setEditable(false);
-        jTextFieldRuta.setText("jTextField1");
         jTextFieldRuta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldRutaActionPerformed(evt);

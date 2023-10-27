@@ -13,7 +13,7 @@ import java.beans.PropertyEditorSupport;
  */
 public class ImagenFondoPropertyEditorSupport extends PropertyEditorSupport 
 {
-    private ImagenFondoPanel imagenFondoPanel = new ImagenFondoPanel();
+    private final ImagenFondoPanel imagenFondoPanel = new ImagenFondoPanel();
 
     @Override
     public boolean supportsCustomEditor() {
@@ -28,7 +28,8 @@ public class ImagenFondoPropertyEditorSupport extends PropertyEditorSupport
     @Override
     public String getJavaInitializationString() {
         ImagenFondo imagenFondo = imagenFondoPanel.getSelectedValue();
-        return "new jpanelimagen.ImagenFondo("+"new java.io.File(\""+imagenFondo.getRutaImagen().getAbsolutePath()+"\"),"+imagenFondo.getOpacidad()+"f)"; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return "new jpanelimagen.ImagenFondo("+"new java.io.File(\""+imagenFondo.getRutaImagen().getAbsolutePath()+"\"),"+imagenFondo.getOpacidad()+"f)";
+                
     }
 
     @Override
