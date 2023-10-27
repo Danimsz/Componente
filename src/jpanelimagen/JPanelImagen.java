@@ -14,26 +14,27 @@ import javax.swing.ImageIcon;
  */
 public class JPanelImagen extends JPanel implements Serializable
 {
-    private File rutaImagen;
+    private ImagenFondo imagenFondo;
     
     public JPanelImagen(){
         
     }
 
-    public File getRutaImagen() {
-        return rutaImagen;
+    public ImagenFondo getImagenFondo() {
+        return imagenFondo;
     }
 
-    public void setRutaImagen(File rutaImagen) {
-        this.rutaImagen = rutaImagen;
+    public void setImagenFondo(ImagenFondo imagenFondo) {
+        this.imagenFondo = imagenFondo;
     }
+
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); 
-        if (rutaImagen!=null && rutaImagen.exists())
+        if (imagenFondo.getRutaImagen()!=null && imagenFondo.getRutaImagen().exists());
         {
-            ImageIcon imageIcon = new ImageIcon(rutaImagen.getAbsolutePath());
+            ImageIcon imageIcon = new ImageIcon(imagenFondo.getRutaImagen().getAbsolutePath());
             g.drawImage(imageIcon.getImage(),0,0, null);
         }
     }
